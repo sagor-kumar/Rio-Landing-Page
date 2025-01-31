@@ -811,6 +811,10 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
   .h-\[36px\] {
     height: 36px;
   }
@@ -861,9 +865,6 @@
   }
   .w-\[62px\] {
     width: 62px;
-  }
-  .w-\[64px\] {
-    width: 64px;
   }
   .w-\[74px\] {
     width: 74px;
@@ -1807,6 +1808,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-\[8px\] {
+    padding-block: 8px;
+  }
   .py-\[14px\] {
     padding-block: 14px;
   }
@@ -1819,9 +1823,6 @@
   .py-\[80px\] {
     padding-block: 80px;
   }
-  .py-\[8px\] {
-    padding-block: 8px;
-  }
   .pt-\[40px\] {
     padding-top: 40px;
   }
@@ -1833,6 +1834,9 @@
   }
   .pr-\[24px\] {
     padding-right: 24px;
+  }
+  .pb-\[20px\] {
+    padding-bottom: 20px;
   }
   .pb-\[40px\] {
     padding-bottom: 40px;
@@ -1907,10 +1911,6 @@
   .font-\[700\] {
     --tw-font-weight: 700;
     font-weight: 700;
-  }
-  .font-\[800\] {
-    --tw-font-weight: 800;
-    font-weight: 800;
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
