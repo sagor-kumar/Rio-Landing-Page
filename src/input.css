@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: Cabinet Grotesk;
+    src: url(CabinetGrotesk.ttf);
+}
+
+@import "tailwindcss";
+
+
+@theme {
+    --primary-color: #1a5eff;
+    --secondary-color: #202b38;
+    --primary-font: Cabinet Grotesk;
+}
+
+body {
+    font-family: "Inter", serif;
+    background-color: rgb(246 246 247);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* header styles starts */
+
+@layer components {
+    .header-content {
+        background-image: url("images/header-bg.svg");
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu-link {
+        font-family: Cabinet Grotesk;
+        font-size: 18px;
+        color: #202b38;
+        font-weight: 700;
+    }
+
+    .primary-btn {
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: var(--primary-color);
+        border-radius: 60px;
+        color: white;
+        font-family: var(--primary-font);
+        font-weight: 700;
+    }
+
+    .hero-heading {
+        color: var(--secondary-color);
+        font-family: var(--primary-font);
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 72px;
+        letter-spacing: -1.6px;
+    }
+
+    .head-color {
+        color: #1a5eff;
+
+    }
+
+    .primary-text {
+        font-size: 18px;
+        color: #414244;
+        line-height: 27px;
+    }
+
+    .happy-client {
+        font-family: var(--primary-font);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--secondary-color);
+    }
+
+    /* video section */
+    .yt-video {
+        width: 100%;
+        min-height: 675px;
+        border-radius: 30px;
+    }
+
+    /* associate styles */
+
+    .associate {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .associate-animation-container {
+        overflow: hidden;
+        position: relative;
+        height: 80px;
+        /*pseudo element hiding problem occurs because of having not a height to container*/
+    }
+
+    .associate-animation-container::before,
+    .associate-animation-container::after {
+        content: "";
+        width: 300px;
+        height: 100%;
+        position: absolute;
+        background-color: red;
+        z-index: 99;
+    }
+
+    .associate-animation-container::before {
+        left: 0;
+        background: linear-gradient(to right, rgb(246 246 247), transparent)
+    }
+
+    .associate-animation-container::after {
+        right: 0;
+        top: 0;
+        background: linear-gradient(to left, rgb(246 246 247), transparent)
+    }
+
+    .associate-animation {
+        display: flex;
+        gap: 120px;
+        animation-name: infinite-scroll;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .associate-content {
+        display: flex;
+        gap: 120px;
+        max-height: 40px;
+    }
+
+    @keyframes infinite-scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .scroll-text {
+        font-family: var(--primary-font);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #57575a;
+        letter-spacing: 0.32px;
+        padding-bottom: 20px;
+    }
+
+    /* service section */
+    .service-title {
+        font-family: var(--primary-font);
+        font-weight: bold;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 10px;
+        line-height: 15px;
+    }
+
+    .service-heading {
+        color: var(--secondary-color);
+        font-family: var(--primary-font);
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: -1.1px;
+    }
+
+    .service-box-heading {
+        color: var(--secondary-color);
+        font-size: 25px;
+        font-family: var(--primary-font);
+        font-weight: bold;
+    }
+
+    .service-learn-more {
+        font-family: var(--primary-font);
+        color: var(--primary-color);
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+
+    /* expertise section styles */
+
+    .expertise-sub-text {
+        font-family: var(--primary-font);
+        font-size: 18px;
+        color: #333333;
+        font-weight: 700;
+    }
+
+    /* harness section styles */
+    .william {
+        font-family: var(--primary-font);
+        color: #333333;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* process section styles */
+
+    .process-box-title {
+        font-family: var(--primary-font);
+        color: var(--primary-color);
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+
+    /* footer styles */
+
+    .footer-link {
+        color: white;
+        font-weight: 500;
+    }
+
+    .footer-wrapper {
+        background-image: url("images/footer-bg.svg");
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+/* header styles ends */
